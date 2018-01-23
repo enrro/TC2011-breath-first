@@ -9,16 +9,16 @@ class Tablero{
 
     }
 
-    public  boolean isTop(int pos){
+    public boolean isTop(int pos){
         return pos>2? true:false;
     }
 
-    public  boolean isBottom(int pos){
+    public boolean isBottom(int pos){
         return pos<6? true:false;
 
     }
 
-    public  boolean isRight(int pos){
+    public boolean isRight(int pos){
         if(pos==2||pos==5||pos==8){
             return false;
         }
@@ -26,18 +26,20 @@ class Tablero{
 
     }
 
-    public  boolean isLeft(int pos){
+    public boolean isLeft(int pos){
         if(pos==0||pos==3||pos==6){
             return false;
         }
         return true;
     }
 
-    public  boolean solved(){
+    public boolean solved(){
         return (Arrays.equals(this.tablero, this.objetivo));
     }
 
-    public  void printMatrix(){
+    public void move(direction)
+
+    public void printMatrix(){
         System.out.println("\n-----------");
         for(int i=0; i<9;i++){
             if(i%3==0 && i!=0){
@@ -48,7 +50,7 @@ class Tablero{
         System.out.println();
     }
 
-    public  void printObjectiveMatrix(){
+    public void printObjectiveMatrix(){
         System.out.println("\n-----------");
         for(int i=0; i<9;i++){
             if(i%3==0 && i!=0){
@@ -59,7 +61,7 @@ class Tablero{
         System.out.println();
     }
 
-    public  void swap(int[] arr,  int pos1, int pos2){
+    public void swap(int[] arr,  int pos1, int pos2){
         int valTemp = arr[pos1];
         arr[pos1] = arr[pos2];
         arr[pos2] = valTemp;
