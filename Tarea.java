@@ -5,8 +5,10 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.io.File;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class Main {
+public class Tarea {
     public static int[] objetivo = new int[9];
     
     public static boolean isTop(int pos){
@@ -57,6 +59,7 @@ public class Main {
     public static void main(String[] args) {
         int mb = 1024*1024;
 
+        Queue<Integer[]> queue  = new LinkedList<Integer[]>();
 		//Getting the runtime reference from system
 		Runtime runtime = Runtime.getRuntime();
 
@@ -78,6 +81,10 @@ public class Main {
         printMatrix(juego);
         printMatrix(objetivo);
         
+        //logic goes here
+        
+
+
 		System.out.println("##### Heap utilization statistics [MB] #####");
         System.out.println("Used Memory: " + (runtime.totalMemory() - runtime.freeMemory()) / mb);
         System.out.println("son iguales: " + solved(juego));
